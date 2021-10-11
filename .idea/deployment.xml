@@ -5,14 +5,7 @@
       <paths name="pi@172.17.21.2:22 agent">
         <serverdata>
           <mappings>
-            <mapping deploy="/home/pi/Documents/sammystuff/test" local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="pi@172.17.21.2:22 password">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/home/pi/Documents/sammystuff/ex" local="$PROJECT_DIR$/ex" web="/" />
+            <mapping deploy="/tmp/pycharm_project_752" local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
       </paths>
