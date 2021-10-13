@@ -16,8 +16,9 @@ def hit(number):
     # print("hit " + number)
     pos = 5.5 + (number -1)
     ax.set_pos(pos)
-    solenoid.up()
-    sol
+    solenoid.on()
+    time.sleep(.01)
+    solenoid.off()
 def on_press(key):
     print(type(key))
     hit(int(key.char))
