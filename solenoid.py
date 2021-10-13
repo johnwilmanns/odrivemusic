@@ -17,11 +17,11 @@ def on():
                                   compare_mode=cyprus.LESS_THAN_OR_EQUAL)
 
 
+if __name__ == "__main__":
+    for i in range(10):
+        off()
+        sleep(1)
+        on()
+        sleep(.01)
 
-for i in range(10):
     off()
-    sleep(1)
-    on()
-    sleep(.01)
-
-off()

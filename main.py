@@ -1,16 +1,42 @@
 # This is a sample Python script.
-import
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import ODrive_Ease_Lib
+import time
+import serial
+import solenoid
+import odrive
+import usb.core
+from odrive.enums import *
+from pynput import keyboard
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+ax, od = ODrive_Ease_Lib.generic_startup()
+ax.scuffed_home()
+
+def hit(number):
+    # print("hit " + number)
+    pos = 5.5 + (number -1)
+    ax.set_pos(pos)
+    solenoid.up()
+    sol
+def on_press(key):
+    print(type(key))
+    hit(int(key.char))
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+
+    #plz forgive me i know this is scuffed
+    # if key == "a":
+    #     hit(0)
+    # elif key == "s":
+    #     hit(1)
+    # elif key == "d":
+    #     hit(2)
+
+
+
+with keyboard.Listener(
+        on_press=on_press) as listener:
+    listener.join()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
+#sadads
